@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           clearRequireCache: false,
           timeout: 100000
         },
-        src: ['test/**/*.js']
+        src: ['test/services/table/*.js']
       }
     },
 
