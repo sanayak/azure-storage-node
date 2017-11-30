@@ -25,9 +25,13 @@ module.exports = function(grunt) {
     mochaTest: {
       test: {
         options: {
-          reporter: 'spec',
-          quiet: false,
-          clearRequireCache: false,
+          reporter: 'mocha-multi-reporters',
+          reporterOptions: {
+                'reporterEnabled': 'mocha-junit-reporter, tap',
+                'mochaJunitReporterReporterOptions': {
+                    'mochaFile': 'TEST-nodejs.xml'
+                }
+            },
           timeout: 100000
         },
         src: ['test/services/table/*.js']
