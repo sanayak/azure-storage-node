@@ -99,7 +99,7 @@ describe('tabledatatype-tests', function () {
   });
 
   beforeEach(function (done) {
-    suite.setupTest(done);
+    setTimeout(function(){ suite.setupTest(done) }, 20000);
   });
 
   afterEach(function (done) {

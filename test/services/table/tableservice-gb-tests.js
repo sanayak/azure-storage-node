@@ -55,13 +55,14 @@ describe('tableservice-gb-tests', function () {
   var value = 'test';
 
   beforeEach(function (done) {
-    suite.setupTest(function(){
+    setTimeout(function() { suite.setupTest(function(){
       tableName = suite.getName(tablePrefix).replace(/-/g,'');
       tableService.createTable(tableName, function (err) {
         should.not.exist(err);
         done();
       });
-    });
+      });
+    }, 20000);
   });
 
   afterEach(function (done) {

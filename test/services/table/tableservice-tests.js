@@ -110,7 +110,7 @@ describe('tableservice-tests', function () {
   beforeEach(function (done) {
     tableName1 = suite.getName(tablePrefix).replace(/-/g,'');
     tableName2 = suite.getName(tablePrefix).replace(/-/g,'');
-    suite.setupTest(done);
+    setTimeout(function(){ suite.setupTest(done) }, 20000);
   });
 
   afterEach(function (done) {

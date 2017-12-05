@@ -101,7 +101,7 @@ describe('tableservice-payload-tests', function () {
 
   beforeEach(function (done) {
     tableNameInit = suite.getName(tableNamePrefix).replace(/-/g,'');
-    suite.setupTest(done);
+    setTimeout(function(){ suite.setupTest(done) }, 20000);
   });
 
   afterEach(function (done) {

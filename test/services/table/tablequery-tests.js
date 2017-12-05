@@ -103,7 +103,7 @@ describe('tablequery-tests', function () {
 
   beforeEach(function (done) {
     tableName = suite.getName(tablePrefix).replace(/-/g,'');
-    suite.setupTest(done);
+    setTimeout(function(){ suite.setupTest(done) }, 20000);
   });
 
   afterEach(function (done) {
